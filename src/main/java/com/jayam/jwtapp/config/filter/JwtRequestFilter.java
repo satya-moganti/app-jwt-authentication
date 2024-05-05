@@ -62,8 +62,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 			if (jwtTokenUtil.validateToken(jwtToken, userDetails)) {
 				    //This are used for checking whether the request for this api is SUPER_ADMIN and it can be used whether he can acces
 				    //the users profiles
-		            request.setAttribute("j-sd",String.valueOf(jwtTokenUtil.isSuperAdmin(userDetails.getAuthorities())));
-		            request.setAttribute("j-user",userDetails.getUsername());
+		            //request.setAttribute("j-sd",String.valueOf(jwtTokenUtil.isSuperAdmin(userDetails.getAuthorities())));
+		            //request.setAttribute("j-user",userDetails.getUsername());
 
 				UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
 						userDetails, null, userDetails.getAuthorities());
